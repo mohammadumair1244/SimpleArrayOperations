@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body style="padding-left: 20px">
+  <p>Array 1 Before</p><p id="demo1"  style="background-color: pink;width: 70px;height: 20px;;text-align: center;"> </p>
+  <p>Array 2 Before</p><p id="demo2" style="background-color: pink;width: 70px;height: 20px;;text-align: center;"></p>
+  <p>Array 1 After</p> <p id="demo3" style="background-color: coral;width: 8%;height: 20px;text-align: center;"> </p>
+  <p>Array 2 After</p> <p id="demo4" style="background-color: coral;width: 70px;height: 20px;;text-align: center;"></p>
+
+  <script>
+    const a =["x","y","z"];
+    const b=["a","b","c","d"];
+
+    document.getElementById("demo1").innerHTML = a;
+    document.getElementById("demo2").innerHTML = b;
+    
+    for(i=0;i<b.length;i++){
+      a.push(b[i]);
+    }
+
+    const r =a[1];
+    a[1]=a[6];
+    a[6]=r;
+
+
+    var c=b.length;
+
+    for(j=1;j<=c;j++){
+      b.shift();
+    }
+    
+    document.getElementById("demo3").innerHTML = a;
+    document.getElementById("demo4").innerHTML = b;
+    
+  </script>
+
+</body>
+</html>
